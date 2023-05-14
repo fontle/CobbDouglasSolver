@@ -18,9 +18,7 @@ y = np.linspace(0, 100, 1000)
 
 z = [[(alpha*x_**px)*(beta*y_**py) for x_ in x] for y_ in y]
 
-
-
-fig = go.Figure(x=x,y=y,z=z)
+fig = go.Figure(go.Surface(x=x,y=y,z=z))
 st.plotly_chart(fig)
 
 
